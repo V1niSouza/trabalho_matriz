@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caça-Palavras em Matriz</title>
+</head>
+<body>
+    
+    <!-- 'C', 'O', 'L', 'L', 'E', 'R', 'S', 'T', 'Y', 'U', 'I', 'P', 'O', 'T', 'S', 'W', 'A', 'E', 'T', 'I', 'O', 'H', 'F', 'D', 'D', 'D', 'A'
+         'D', 'E', 'A', 'D', 'E', 'W', 'R', 'Y', 'I', 'C', 'V', 'B', 'N', 'A', 'Q', 'G', 'J', 'J', 'E', 'W', 'Q', 'Q', 'D', 'G', 'H', 'J', 'A'
+         'H', 'W', 'E', 'X', 'Z', 'X', 'V', 'B', 'N', 'F', 'G', 'H', 'H', 'J', 'K', 'L', 'Ç', 'O', 'P', 'H', 'E', 'E', 'R', 'T', 'H', 'J', 'K'
+         'U', 'E', 'R', 'W', 'W', 'E', 'T', 'Y', 'U', 'A', 'C', 'V', 'V', 'B', 'N', 'M', 'K', 'L', 'H', 'F', 'E', 'R', 'T', 'Y', 'U', 'A', 'S'
+         'B', 'W', 'E', 'C', 'F', 'G', 'H', 'K', 'N', 'B', 'B', 'X', 'X', 'A', 'A', 'W', 'E', 'R', 'T', 'J', 'J', 'H', 'F', 'D', 'A', 'S', 'S'
+         'O', 'T', 'T', 'Y', 'U', 'I', 'O', 'P', 'U', 'R', 'T', 'Y', 'U', 'R', 'A', 'D', 'G', 'H', 'J', 'K', 'K', 'K', 'J', 'H', 'G', 'F', 'F'
+         'Q', 'B', 'V', 'C', 'C', 'C', 'P', 'U', 'H', 'R', 'Y', 'N', 'U', 'T', 'R', 'R', 'S', 'S', 'F', 'H', 'J', 'T', 'R', 'T', 'G', 'G', 'G'    -->
+         
+         <!-- Monitor
+              HUB
+              COLLER
+              TECLADO
+              MOUSE
+              CONTROLE
+              PC
+              FONE
+              WEBCAM
+              MESA
+              CADEIRA
+              MICROFONE -->
+              <h2>PALAVRAS:</h2>
+              <h5>-HUB</h5>
+              <h5>-COLLER</h5>
+              <h5>-TECLADO</h5>
+              <h5>-MOUSE</h5>
+              <h5>-CONTROLE</h5>
+              <h5>-PC</h5>
+              <h5>-FONE</h5>
+              <h5>-WEBCAM</h5>
+              <h5>-MESA</h5>
+              <h5>-CADEIRA</h5>
+              <h5>-MICROFONE</h5>
+
+              <table  border= "2px solid Black" width="40%" border="0" cellspacing="10" cellpadding="4">
+<script>
+
+ matriz = new Array;
+ matriz = [
+           [['C', 'PowderBlue'],['O', 'PowderBlue'],['L', 'PowderBlue'],['L', 'PowderBlue'],['E', 'PowderBlue'],['R', 'PowderBlue'],['S', 'White'],['T', 'White'],['Y', 'White'],['U', 'White'],['I', 'White'],['P', 'White'],['O', 'White'],['T', 'White'],['C', 'PowderBlue'],['A', 'PowderBlue'],['D', 'PowderBlue'],['E', 'PowderBlue'],['I', 'PowderBlue'],['R', 'PowderBlue'],['A', 'PowderBlue'],['H', 'White'],['F', 'White'],['D', 'White'],['D', 'White'],['D', 'White'],['P', 'PowderBlue']],
+           [['D', 'White'],['E', 'White'],['A', 'White'],['D', 'White'],['E', 'White'],['W', 'White'],['R', 'White'],['Y', 'White'],['I', 'White'],['C', 'White'],['V', 'White'],['B', 'White'],['N', 'White'],['A', 'White'],['Q', 'White'],['G', 'White'],['J', 'White'],['J', 'White'],['E', 'White'],['W', 'White'],['A', 'White'],['Q', 'White'],['D', 'White'],['G', 'White'],['H', 'White'],['C', 'PowderBlue'],['A', 'White']],
+           [['H', 'PowderBlue'],['W', 'White'],['E', 'White'],['X', 'White'],['Z', 'White'],['X', 'White'],['V', 'White'],['B', 'White'],['N', 'White'],['F', 'White'],['G', 'White'],['H', 'White'],['H', 'White'],['F', 'PowderBlue'],['O', 'PowderBlue'],['N', 'PowderBlue'],['E', 'PowderBlue'],['O', 'White'],['P', 'White'],['H', 'White'],['E', 'White'],['E', 'White'],['R', 'White'],['T', 'White'],['H', 'White'],['J', 'White'],['K', 'White']],
+           [['U', 'PowderBlue'],['E', 'White'],['M', 'PowderBlue'],['O', 'PowderBlue'],['U', 'PowderBlue'],['S', 'PowderBlue'],['E', 'PowderBlue'],['Y', 'White'],['U', 'White'],['A', 'White'],['C', 'White'],['V', 'White'],['V', 'White'],['B', 'White'],['N', 'White'],['M', 'White'],['K', 'White'],['M', 'PowderBlue'],['I', 'PowderBlue'],['C', 'PowderBlue'],['R', 'PowderBlue'],['O', 'PowderBlue'],['F', 'PowderBlue'],['O', 'PowderBlue'],['N', 'PowderBlue'],['E', 'PowderBlue'],['S', 'White']],
+           [['B', 'PowderBlue'],['W', 'White'],['E', 'White'],['C', 'White'],['F', 'White'],['G', 'White'],['H', 'White'],['K', 'White'],['N', 'White'],['B', 'White'],['B', 'White'],['X', 'White'],['C', 'PowderBlue'],['O', 'PowderBlue'],['N', 'PowderBlue'],['T', 'PowderBlue'],['R', 'PowderBlue'],['O', 'PowderBlue'],['L', 'PowderBlue'],['E', 'PowderBlue'],['J', 'White'],['H', 'White'],['F', 'White'],['D', 'White'],['A', 'White'],['S', 'White'],['S', 'White']],
+           [['O', 'White'],['T', 'White'],['T', 'White'],['Y', 'White'],['U', 'White'],['I', 'White'],['O', 'White'],['P', 'White'],['W', 'PowderBlue'],['E', 'PowderBlue'],['B', 'PowderBlue'],['C', 'PowderBlue'],['A', 'PowderBlue'],['M', 'PowderBlue'],['A', 'White'],['D', 'White'],['G', 'White'],['H', 'White'],['J', 'White'],['K', 'White'],['K', 'White'],['K', 'White'],['J', 'White'],['H', 'White'],['G', 'White'],['F', 'White'],['F', 'White']],
+           [['Q', 'White'],['T', 'PowderBlue'],['E', 'PowderBlue'],['C', 'PowderBlue'],['L', 'PowderBlue'],['A', 'PowderBlue'],['D', 'PowderBlue'],['O', 'PowderBlue'],['H', 'White'],['R', 'White'],['Y', 'White'],['N', 'White'],['U', 'White'],['T', 'White'],['R', 'White'],['R', 'White'],['S', 'White'],['S', 'White'],['M', 'PowderBlue'],['E', 'PowderBlue'],['S', 'PowderBlue'],['A', 'PowderBlue'],['R', 'White'],['T', 'White'],['G', 'White'],['G', 'White'],['G', 'White']],
+          ];
+
+ for(linha=0;linha<7;linha++){
+       document.write("<tr>");
+ for(coluna=0;coluna<27;coluna++){
+       document.write("<td bgcolor='" + matriz[linha][coluna][1] + "''>" + matriz[linha][coluna][0] + "</td>");
+    } 
+     document.write("</tr>")
+       document.write("<br>")
+ }
+</script>
+</table>
+</body>
+</html>
+
+
+
+<!-- VINICIUS SOUZA RAMOS -->
